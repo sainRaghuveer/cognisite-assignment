@@ -81,6 +81,7 @@ The project structure of the application is as follows:
 | /users | `POST` | Register user's data in JSON server |
 | /users | `GET` | For comparing user's data for login |
 | /list | `GET` | To get all task that are present in JSON server |
+| /list | `POST` | To post new task in JSON server |
 | /list/id | `DELETE` |	To delete task |
 
 
