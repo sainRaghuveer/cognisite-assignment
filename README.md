@@ -67,3 +67,16 @@ The project structure of the application is as follows:
 
 - Contributing
   -  Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+
+
+ # Some screen shot for reference 
+
+## Sign up page
+
+## Login page
+
+
+## Home page
+
+
