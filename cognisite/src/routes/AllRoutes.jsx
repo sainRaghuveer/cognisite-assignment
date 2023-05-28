@@ -4,6 +4,7 @@ import Signup from '../pages/Signup';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import PrivateRoute from '../pages/PrivateRoute';
+import FourOFour from '../pages/FourOFour';
 
 const AllRoutes = () => {
     return (
@@ -16,7 +17,7 @@ const AllRoutes = () => {
                         <Home />
                     </PrivateRoute>
                 }></Route>
-
+                <Route path='*' element={<FourOFour />}></Route>
             </Routes>
         </div>
     )
