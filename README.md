@@ -15,7 +15,7 @@ This is a React application that allows users to register, login, and manage tas
 1. Clone the repository:
 
    ```shell
-   git clone <repository-url>
+   git clone https://github.com/sainRaghuveer/cognisite-assignment.git
 
 2. Navigate to the project directory:
    ```shell
