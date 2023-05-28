@@ -86,11 +86,11 @@ const Signup = () => {
                 </label>
                 <br />
                 <Box style={{width:"50%", margin:"auto", textAlign:"center", marginTop:"50px"}}>
-                <Button type="submit">Register</Button>
+                <Button style={{backgroundColor:"teal"}} type="submit">Register</Button>
                 </Box>
-                <Box style={{ display: "flex", width: "80%", margin: "auto", justifyContent: "space-around", marginTop: "15px" }}>
-                    <Text>If you already registered </Text>
-                    <Button onClick={handleLogin}>Login here</Button>
+                <Box style={{ display: "flex", width: "80%", margin: "auto", justifyContent: "space-around", marginTop: "30px" }}>
+                    <Text style={{marginTop:"7px"}}>If you already registered </Text>
+                    <Button style={{backgroundColor:"teal"}} onClick={handleLogin}>Login here</Button>
                 </Box>
             </form>
         </div>

@@ -54,7 +54,7 @@ const Login = () => {
                 </label>
                 <br />
                 <Box style={{ width: "50%", margin: "auto", textAlign: "center", marginTop: "50px" }}>
-                    <Button type="submit">Login</Button>
+                    <Button style={{backgroundColor:"teal"}} className={styles.btn} type="submit">Login</Button>
                 </Box>
             </form>
         </div>
