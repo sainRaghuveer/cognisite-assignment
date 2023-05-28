@@ -10,6 +10,8 @@ This is a React application that allows users to register, login, and manage tas
 
 - Task Management: Users can add tasks to a list and view/delete tasks. The tasks are stored in a JSON file on the server.
 
+- JSON-server is deployed on render so we can use as base url that  
+
 ## Installation
 
 1. Clone the repository:
@@ -80,3 +82,7 @@ The project structure of the application is as follows:
 ## Home page
 <img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/cafcbad0-e4b1-4c88-9973-4fe065b76ad0" alt="image"/>
 
+
+
+# References
+<a href="https://github.com/typicode/json-server"> JSON server documentation</a>
