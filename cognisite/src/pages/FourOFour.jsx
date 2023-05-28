@@ -1,6 +1,8 @@
 import { Box, Heading, Text, Button } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
+
+//to handle unauthorized route 
 export default function FourOFour() {
     const navigate = useNavigate();
 
