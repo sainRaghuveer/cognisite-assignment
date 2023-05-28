@@ -24,6 +24,16 @@ const Signup = () => {
 
         try {
             setLoading(true);
+            if(user.name=="" || user.mobile=="" || user.password==""){
+                toast({
+                    title: `Please fill all fields`,
+                    status: "warning",
+                    isClosable: true,
+                    position: "top"
+                });
+                setLoading(false);
+                return;
+            }
             const response = await fetch('https://mock-serverfor-mock6.onrender.com/users');
             setLoading(false);
             if (response.ok) {
