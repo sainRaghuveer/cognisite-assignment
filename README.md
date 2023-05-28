@@ -69,14 +69,14 @@ The project structure of the application is as follows:
   -  Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 
-
  # Some screen shot for reference 
 
 ## Sign up page
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/e6459b0e-cc4f-475b-a392-2b341a3cca36" alt="image"/>
 
 ## Login page
-
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/dc04443b-b837-403b-a58d-6ccfbf673282" alt="image"/>
 
 ## Home page
-
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/cafcbad0-e4b1-4c88-9973-4fe065b76ad0" alt="image"/>
 
