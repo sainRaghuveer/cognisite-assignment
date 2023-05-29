@@ -1,0 +1,57 @@
+{
+    "users": [
+      {
+        "name": "Raghuveer Sain",
+        "mobile": "8440874898",
+        "password": "12345",
+        "id": 1
+      },
+      {
+        "name": "Raghuveer",
+        "mobile": "8440874897",
+        "password": "12345",
+        "id": 2
+      },
+      {
+        "name": "Kapil Sain",
+        "mobile": "9001167008",
+        "password": "12345",
+        "id": 3
+      }
+    ],
+    "list": [
+      
+        {
+          "id" : 1,
+          "title" : "coreyschafer",
+          "status":true
+        },
+        {
+          "id" : 2,
+          "title" : "Study",
+          "status":true 
+        },
+        {
+          "id" : 3,
+          "title" : "react",
+          "status":true	 
+        },
+        {
+          "id" : 4,
+          "title" : "Typescript",
+          "status":true
+        },
+        {
+          "id" : 5,
+          "title" : "AWS",
+          "status":true	 
+        },
+        {
+          "id" : 6,
+          "title" : "Next.js",
+          "status":true 
+        }
+      ]
+  }
+
+  
