@@ -66,7 +66,7 @@ export default function Navbar() {
 
     return (
         <>
-            <Box bg={useColorModeValue('gray.500', 'gray.700')} px={4} >
+            <Box bg={"#72c3e0"} px={4} >
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <Box>Cognisite</Box>
 
