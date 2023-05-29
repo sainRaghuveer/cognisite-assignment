@@ -32,7 +32,7 @@ const TaskForm = ({ addTask, loading }) => {
             <Box className={styles.container}>
                 <Box className={styles.myinput}>
                     <Input type="text" value={task} placeholder='Add new task here..' onChange={(e) => setTask(e.target.value)} />
-                    <Button type="submit">{loading?<Spinner/>:"Add Task"}</Button>
+                    <Button type="submit" isDisabled={loading}>{loading?<Spinner/>:"Add Task"}</Button>
                 </Box>  
             </Box>
         </form>

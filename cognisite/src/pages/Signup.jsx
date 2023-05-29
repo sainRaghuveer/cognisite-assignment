@@ -1,7 +1,7 @@
-import { Box, Button, Input, Text, useToast } from '@chakra-ui/react';
+import { Box, Button, Heading, Input, Text, border, useToast } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from "../styles/Signup.module.css";
+import "../styles/Signup.css"
 import { Spinner } from '@chakra-ui/react';
 
 const Signup = () => {
@@ -10,7 +10,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const toast =useToast();
+    const toast = useToast();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -24,9 +24,19 @@ const Signup = () => {
 
         try {
             setLoading(true);
-            if(user.name=="" || user.mobile=="" || user.password==""){
+            if (user.name == "" || user.mobile == "" || user.password == "") {
                 toast({
                     title: `Please fill all fields`,
+                    status: "warning",
+                    isClosable: true,
+                    position: "top"
+                });
+                setLoading(false);
+                return;
+            }
+            if (user.mobile.length < 10 || user.mobile.length > 10) {
+                toast({
+                    title: `Mobile number should be of 10 digits`,
                     status: "warning",
                     isClosable: true,
                     position: "top"
@@ -114,29 +124,36 @@ const Signup = () => {
     }
 
     return (
-        <div className={styles.container}>
-            <form onSubmit={handleSubmit}>
-                <Text mb='8px'>Name:</Text>
-                <Input style={{border:"1px solid gray"}} type="text" value={name} placeholder='Type your name..' onChange={(e) => setName(e.target.value)} />
-                <br />
-                <label>
-                    Mobile:
-                    <Input style={{border:"1px solid gray"}} type="text" value={mobile} placeholder='Type your Mobile number..' onChange={(e) => setMobile(e.target.value)} />
-                </label>
-                <br />
-                <label>
-                    Password:
-                    <Input style={{border:"1px solid gray"}} type="password" value={password} placeholder='Type your password..' onChange={(e) => setPassword(e.target.value)} />
-                </label>
-                <br />
-                <Box style={{width:"50%", margin:"auto", textAlign:"center", marginTop:"50px"}}>
-                <Button style={{backgroundColor:"teal"}} type="submit">{loading?<Spinner/>:"Register"}</Button>
-                </Box>
-                <Box style={{ display: "flex", width: "80%", margin: "auto", justifyContent: "space-around", marginTop: "30px" }}>
-                    <Text style={{marginTop:"7px"}}>If you already registered </Text>
-                    <Button style={{backgroundColor:"teal"}} onClick={handleLogin}>Login</Button>
-                </Box>
-            </form>
+        <div className="parent">
+
+            <div className="container">
+                <div style={{ width: "90%", margin: "auto" }}>
+                    <Heading fontSize={"20px"}> Welcome to Task app you can Register here</Heading>
+                    {loading?"Please wait while Register...":null}
+                </div>
+                <form onSubmit={handleSubmit}>
+                    <Text mb='8px'>Name:</Text>
+                    <Input type="text" value={name} placeholder='Type your name..' onChange={(e) => setName(e.target.value)} style={{ border: "1px solid black" }} />
+                    <br />
+                    <label>
+                        Mobile:
+                        <Input type="number" value={mobile} placeholder='Type your Mobile number..' onChange={(e) => setMobile(e.target.value)} style={{ border: "1px solid black" }} />
+                    </label>
+                    <br />
+                    <label>
+                        Password:
+                        <Input type="password" value={password} placeholder='Type your password..' onChange={(e) => setPassword(e.target.value)} style={{ border: "1px solid black" }} />
+                    </label>
+                    <br />
+                    <Box style={{ width: "50%", margin: "auto", textAlign: "center", marginTop: "50px" }}>
+                        <Button style={{ backgroundColor: "teal" }} type="submit" isDisabled={loading}>{loading ? <Spinner /> : "Register"}</Button>
+                    </Box>
+                    <Box style={{ display: "flex", width: "80%", margin: "auto", justifyContent: "space-between", marginTop: "30px", border: "1px solid black", borderRadius: "8px", backgroundColor: "#b4c4db" }}>
+                        <Text style={{ marginTop: "7px" }}>If you already registered </Text>
+                        <Button style={{ backgroundColor: "teal" }} onClick={handleLogin} isDisabled={loading}>Login</Button>
+                    </Box>
+                </form>
+            </div>
         </div>
     );
 };

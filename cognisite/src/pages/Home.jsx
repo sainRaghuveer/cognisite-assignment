@@ -113,7 +113,7 @@ const Home = () => {
     return (
         <div style={{ width: "90%", margin: "auto" }}>
             <TaskForm addTask={addTask} loading={loading}/>
-            <TableContainer style={{ width: "80%", margin: "auto", marginTop: "20px" }}>
+            <TableContainer style={{ width: "80%", margin: "auto", marginTop: "20px", color:"black" }}>
                 <Table variant='simple'>
                     <TableCaption>All Task will be here</TableCaption>
                     <Thead>
@@ -126,7 +126,7 @@ const Home = () => {
                     </Thead>
                     <Tbody>
                         {tasks.length > 0 && tasks.map((el, index) => (
-                            <Tr key={index}>
+                            <Tr key={index} style={{border:"1px solid black"}}>
                                 <Td>{el.id}</Td>
                                 <Td>{el.title}</Td>
                                 <Td>{el.status ? "Pending" : "Completed"}</Td>
