@@ -126,10 +126,10 @@ const Home = () => {
                     </Thead>
                     <Tbody>
                         {tasks.length > 0 && tasks.map((el, index) => (
-                            <Tr key={index} style={{border:"1px solid black"}}>
+                            <Tr key={index} style={{border:"2px solid teal"}}>
                                 <Td>{el.id}</Td>
                                 <Td>{el.title}</Td>
-                                <Td>{el.status ? "Pending" : "Completed"}</Td>
+                                <Td>{el.status ? "Completed" : "Pending"}</Td>
                                 <Td><DeleteIcon onClick={() => handleDelete(el)} /></Td>
                             </Tr>
                         ))}
