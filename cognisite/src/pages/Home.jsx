@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import TaskForm from '../components/TaskForm'
+import TaskForm from '../components/TaskForm';
+import { Spinner } from '@chakra-ui/react';
 import {
     Table,
     Thead,
@@ -17,6 +18,7 @@ import { DeleteIcon, EditIcon } from '@chakra-ui/icons';
 const Home = () => {
     const [tasks, setTasks] = useState([]);
     const toast = useToast();
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetchTasks();
@@ -38,6 +40,7 @@ const Home = () => {
 
     const addTask = async (newTask) => {
         try {
+            setLoading(true);
             const response = await fetch('https://mock-serverfor-mock6.onrender.com/list', {
                 method: 'POST',
                 headers: {
@@ -45,7 +48,7 @@ const Home = () => {
                 },
                 body: JSON.stringify(newTask)
             });
-
+            setLoading(false);
             if (response.ok) {
                 const data = await response.json();
                 console.log("data", data)
@@ -63,7 +66,8 @@ const Home = () => {
                     status: "error",
                     isClosable: true,
                     position: "top"
-                })
+                });
+                setLoading(false);
             }
         } catch (error) {
             console.log('Error:', error);
@@ -74,6 +78,7 @@ const Home = () => {
                 position: "top"
             })
         }
+        setLoading(false);
     };
 
     const handleDelete = async (el) => {
@@ -107,7 +112,7 @@ const Home = () => {
 
     return (
         <div style={{ width: "90%", margin: "auto" }}>
-            <TaskForm addTask={addTask} />
+            <TaskForm addTask={addTask} loading={loading}/>
             <TableContainer style={{ width: "80%", margin: "auto", marginTop: "20px" }}>
                 <Table variant='simple'>
                     <TableCaption>All Task will be here</TableCaption>
