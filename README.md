@@ -90,14 +90,17 @@ The project structure of the application is as follows:
  # Some screen shot for reference 
 
 ## Sign up page
-<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/e6459b0e-cc4f-475b-a392-2b341a3cca36" alt="image"/>
+
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/4a883aec-e045-4779-b6a4-94c36549528a" alt="image"/>
 
 ## Login page
-<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/dc04443b-b837-403b-a58d-6ccfbf673282" alt="image"/>
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/e03616bc-0caf-4a76-aef2-7ad705c4c20d" alt="image"/>
 
 ## Home page
-<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/cafcbad0-e4b1-4c88-9973-4fe065b76ad0" alt="image"/>
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/c753a3a6-e196-4ffa-b455-518ef65c3be9" alt="image"/>
 
+## Task added like that
+<img src="https://github.com/sainRaghuveer/cognisite-assignment/assets/112657812/06fe1e24-01df-4618-a6f9-6b1018bc32f4" alt="image"/>
 
 
 # References
